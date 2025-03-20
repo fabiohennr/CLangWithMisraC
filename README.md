@@ -50,11 +50,12 @@ sudo apt update
 Instale as ferramentas de desenvolvimento e utilitários necessários:
 
 ```bash
-sudo apt install -y build-essential tmux clang clang-tools clang-tidy
+sudo apt install -y build-essential tmux nano clang clang-tools clang-tidy
 ```
 
 - `build-essential`: Pacote que contém as ferramentas essenciais para compilação de software.
 - `tmux`: Multiplexador de terminal para gerenciar múltiplas sessões e painéis para facilitar a visualização dos testes.
+- `nano`: Visualizador e editor de texto baseado em terminal para Linux.
 - `clang`, `clang-tools`, `clang-tidy`: Compilador Clang e ferramentas de análise estática e incorporação da verificação MISRA C.
 
 #### 2.3. **Verificar Instalação:**
@@ -121,15 +122,7 @@ clang-tidy -checks='misra-*' example1.c -- -I/path/to/includes -DDEFINE1 -DDEFIN
 ```
 
 A saída exibirá as violações MISRA C encontradas.
-
-#### 2.8. **Limpeza (Opcional):**
-
-Para remover os arquivos gerados durante a compilação, execute:
-
-```bash
-make clean
-```
-
+Se nada for exibido significa que não foram encontradas nenhum divergência no código.
 ---
 
 ## Recursos Adicionais
