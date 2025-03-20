@@ -6,11 +6,11 @@ Este tutorial descreve o passo a passo para guiá-lo na configuração de um amb
 
 Você pode configurar este ambiente rapidamente usando Docker. Uma imagem pré-configurada está disponível no Docker Hub.
 
-### 1. **Instale o Docker:**
+### 1.1 **Instale o Docker:**
 
 Se você ainda não tem o Docker instalado, siga as instruções de instalação para sua distribuição Linux em [docs.docker.com](https://docs.docker.com/engine/install/).
 
-### 1.1. **Execute o Contêiner Docker:**
+### 1.2. **Execute o Contêiner Docker:**
 
 Execute o seguinte comando no terminal para baixar e executar a imagem Docker:
 
@@ -18,7 +18,7 @@ Execute o seguinte comando no terminal para baixar e executar a imagem Docker:
 docker run -it fabiohennr/clang_with_misrac
 ```
 
-### 1.2. **Acesse o Ambiente de Desenvolvimento:**
+### 1.3. **Acesse o Ambiente de Desenvolvimento:**
 
 Após a execução do comando, você estará dentro do contêiner Docker com o ambiente de desenvolvimento pronto para uso.
 
@@ -95,7 +95,18 @@ tmux
 - Navegue entre os painéis com `Ctrl+b <seta>`.
 - Em cada painel, você pode executar comandos em diferentes pastas de exemplo e visualizar a diferença entre eles.
 
-#### 2.6. **Executar Clang-Tidy:**
+#### 2.6. **Exibir arquivos do repositório:**
+
+- Execute o comando para listar os arquivos da pasta do repositório para confirmar se foi tudo carregado.
+- O resultado devera ser o seguinte:
+
+```bash
+ls
+Dockerfile  README.md  example1  example2  example3
+```
+
+
+#### 2.7. **Executar Clang-Tidy:**
 
 Entre em alguma pasta de arquivo, por exemplo:
 
@@ -111,7 +122,7 @@ clang-tidy -checks='misra-*' example1.c -- -I/path/to/includes -DDEFINE1 -DDEFIN
 
 A saída exibirá as violações MISRA C encontradas.
 
-#### 2.7. **Limpeza (Opcional):**
+#### 2.8. **Limpeza (Opcional):**
 
 Para remover os arquivos gerados durante a compilação, execute:
 
