@@ -66,6 +66,7 @@ Verifique se as ferramentas foram instaladas corretamente executando os seguinte
 clang --version
 clang-tidy --version
 tmux --version
+nano --version
 ```
 
 Cada comando deve exibir a versão da ferramenta instalada.
@@ -126,6 +127,12 @@ Se nada for exibido significa que não foram encontradas nenhum divergência no 
 
 
 ---
+
+## Pontos de atenção
+- O uso do Clang com clang-tidy para verificação do padrão não é certificado pelo MISRAC. Portanto não traz garantia de que irá cobrir todas as regras da norma.
+- Aqui mostro, portanto, apenas uma simples aplicação para exemplificar e facilidar uma imersão na ferramenta e ao padrão.
+- **Pontos positivos:** É Gratuito. Faz verificação de análise estática de forma rápida. Pode ser um bom ponto de partida para verificação MISRAC para ferramentas certificadas como Polyspace, LDRA, PRQA (QA-C), Astrée e Coverity (cobrem 100% das regras e são certificadas)
+- **Pontos negativos:** Não cobre 100% do padrão MISRA C e não possui certificação.
 
 ## Recursos Adicionais
 
