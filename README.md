@@ -22,7 +22,7 @@ docker run -it fabiohennr/clang_with_misrac
 
 Após a execução do comando, você estará dentro do contêiner Docker com o ambiente de desenvolvimento pronto para uso.
 
-**Agora pule para o passo 2.5 para execução do teste de uso da ferramenta.**
+**Agora pule para o passo 2.6 para execução do teste de uso da ferramenta.**
 
 ---
 
@@ -69,7 +69,21 @@ tmux --version
 
 Cada comando deve exibir a versão da ferramenta instalada.
 
-#### 2.4. **Usar Tmux para Múltiplas Janelas:**
+#### 2.4. **Clonar o Repositório:**
+
+Clone o repositório contendo exemplos e configurações pré-configuradas para análise MISRA C:
+
+```bash
+git clone https://github.com/fabiohennr/CLangWithMisraC.git
+```
+
+Entre na pasta do repositório clonado:
+
+```bash
+cd CLangWithMisraC
+```
+
+#### 2.5. **Usar Tmux para Múltiplas Janelas:**
 
 Inicie uma sessão `tmux`:
 
@@ -81,7 +95,7 @@ tmux
 - Navegue entre os painéis com `Ctrl+b <seta>`.
 - Em cada painel, você pode executar comandos em diferentes pastas de exemplo e visualizar a diferença entre eles.
 
-#### 2.5. **Executar Clang-Tidy:**
+#### 2.6. **Executar Clang-Tidy:**
 
 Entre em alguma pasta de arquivo, por exemplo:
 
@@ -97,7 +111,7 @@ clang-tidy -checks='misra-*' example1.c -- -I/path/to/includes -DDEFINE1 -DDEFIN
 
 A saída exibirá as violações MISRA C encontradas.
 
-#### 2.6. **Limpeza (Opcional):**
+#### 2.7. **Limpeza (Opcional):**
 
 Para remover os arquivos gerados durante a compilação, execute:
 
