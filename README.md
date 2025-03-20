@@ -123,6 +123,8 @@ clang-tidy -checks='misra-*' example1.c -- -I/path/to/includes -DDEFINE1 -DDEFIN
 
 A saída exibirá as violações MISRA C encontradas.
 Se nada for exibido significa que não foram encontradas nenhum divergência no código.
+
+
 ---
 
 ## Recursos Adicionais
